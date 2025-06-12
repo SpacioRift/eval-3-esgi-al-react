@@ -7,6 +7,7 @@ const router = express.Router();
 
 router.get("/",auth,postController.getAll);
 router.get("/:id",auth,postController.getById);
+router.get("/page/:page",auth,postController.getPage);
 router.post("/",multer,auth,postController.create);
 router.put("/:id",multer,auth,postController.update);
 router.delete("/:id",auth,postController.remove);

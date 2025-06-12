@@ -5,6 +5,7 @@ const postRoute =require("./route/post.route.js");
 const emoticonRoute =require("./route/emoticon.route.js");
 const {connect} = require('./model/connexion.js');
 const sync = require('./model/sync.js');
+const cors = require('cors');
 const app = express();
 
 const database = async () => {
@@ -13,7 +14,7 @@ const database = async () => {
 }
 database();
 
-app.use(express.json());
+app.use(express.json(), cors());
 
 app.use('/auth',authRoute);
 app.use('/user', userRoute);

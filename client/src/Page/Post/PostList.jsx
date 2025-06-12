@@ -10,7 +10,7 @@ export default function PostList() {
         fetch('http://localhost:3000/post/' + page, {
             method: "GET",
             headers:{
-                authorization: 'Bearer ' + "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImF2YWFzdDJAbXlnZXMuZnIiLCJpZCI6MSwiaWF0IjoxNzQ5NzMzNDU0fQ.oAFReulpoxasql6Z7ZA4e9vmVcU2NkNA9G1RLd1ODD8"
+                authorization: 'Bearer ' + "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImF2YWFzdDJAbXlnZXMuZnIiLCJpZCI6MSwiaWF0IjoxNzQ5NzM1NDY0fQ.T4xO4a19bmcxCWWX4VBOvR6yWBr8FSHNZ7K4KObaqAE"
             }
         })
             .then(result => result.json())

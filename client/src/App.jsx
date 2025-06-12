@@ -1,12 +1,8 @@
-import { useState } from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
-import Emotion from './Component/emotion.jsx'
+import './Component/Emotion/emotion.jsx'
+import './Page/Post/PostList.jsx'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
@@ -14,6 +10,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/emotion" element={<Emotion />} />
+            <Route path="/post" element={<PostList />} />
           </Routes>
         </BrowserRouter> 
       </div>

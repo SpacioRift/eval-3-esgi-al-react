@@ -9,7 +9,6 @@ function App() {
       <div className=''>
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<Emotion />} />
             <Route path="/emotion" element={<Emotion />} />
             <Route path="/post" element={<PostList />} />
           </Routes>

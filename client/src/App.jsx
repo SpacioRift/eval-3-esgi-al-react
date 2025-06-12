@@ -1,6 +1,7 @@
 import './App.css'
-import './Component/Emotion/emotion.jsx'
-import './Page/Post/PostList.jsx'
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import Emotion from '../src/Component/Emotion/emotion.jsx'
+import PostList from './Page/Post/PostList.jsx'
 
 function App() {
 

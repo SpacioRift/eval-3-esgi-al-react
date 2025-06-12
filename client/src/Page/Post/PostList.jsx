@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import UserCard from "../../Component/PostCard/UserCard";
 import "./PostList.css";
 
 export default function PostList() {
@@ -9,7 +10,7 @@ export default function PostList() {
         fetch('http://localhost:3000/post/' + page, {
             method: "GET",
             headers:{
-                authorization: 'Bearer ' + "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImF2YWFzdDJAbXlnZXMuZnIiLCJpZCI6MSwiaWF0IjoxNzQ5NzMxNzIwfQ.ZPrvgq3cX5NEBx8H4B3w6VZwPi9cey5QFmHK4ukujvw"
+                authorization: 'Bearer ' + "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImF2YWFzdDJAbXlnZXMuZnIiLCJpZCI6MSwiaWF0IjoxNzQ5NzMzNDU0fQ.oAFReulpoxasql6Z7ZA4e9vmVcU2NkNA9G1RLd1ODD8"
             }
         })
             .then(result => result.json())
@@ -27,6 +28,28 @@ export default function PostList() {
     }
 
     return (
-        
+        <div className="user-list">
+            {
+                postList.data.map(user => {
+                    return (
+                        <UserCard user={user}>
+                            <button> Ajouter aux amis</button>
+                        </UserCard>
+                    )
+                }
+                )
+            }
+            <div className="button-page">
+                <button className="previous" disabled={page === 1} onClick={() => setPage(page - 1)}>Précédent</button>
+                {
+                    Array.from({ length: postList.count / 20 }, (_, i) => i).map(e => {
+                        return (
+                            <button className={e+1 === page ? "active" : ""} onClick={() => setPage(e + 1)}>{e + 1}</button>
+                        )
+                    })
+                }
+                <button className="previous" disabled={page * 20 >= postList.count} onClick={() => setPage(page + 1)}>Suivant</button>
+            </div>
+        </div>
     )
 }

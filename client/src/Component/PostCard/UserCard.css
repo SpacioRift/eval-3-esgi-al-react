@@ -1,0 +1,25 @@
+.user-card {
+    display: flex;
+    padding: 20px;
+    border: 1px solid #D0D0D0;
+    border-radius: 4px;
+    flex-direction: column;
+    background-color: #151515;
+    width: 200px;
+}
+
+.user-card .picture img{
+    border-radius: 50%;
+}
+
+.user-card .name{
+    font-weight: 700;
+}
+
+.user-card .job{
+    font-style: italic;
+}
+
+.user-card .email{
+    font-size: 80%;
+}

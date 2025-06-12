@@ -1,6 +1,6 @@
 import './App.css'
-import './Component/emotion.jsx'
-import './Page/PostList.jsx'
+import './Component/Emotion/emotion.jsx'
+import './Page/Post/PostList.jsx'
 
 function App() {
 

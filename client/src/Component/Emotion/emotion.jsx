@@ -9,14 +9,14 @@ export default function Emotion() {
     const [emotion, setEmotion] = useState(false);
 
         useEffect(() => {
-            fetch('http://localhost:3000/user/', { // Modifier l'url en fonction de l'API
+            fetch('http://localhost:3000/emoticone/', { // Modifier l'url en fonction de l'API
                 method: "POST"
             })
             .then(result => result.json())
             .then(data => setUserList(data)) // pas nécessaire ici
         });
         useEffect(() => { // Modifier l'url en fonction de l'API
-            fetch('http://localhost:3000/user/', {
+            fetch('http://localhost:3000/emoticone/', {
                 method: "DELETE"
             })
             .then(result => result.json())

@@ -1,4 +1,4 @@
-.user-card {
+.post-card {
     display: flex;
     padding: 20px;
     border: 1px solid #D0D0D0;
@@ -8,18 +8,18 @@
     width: 200px;
 }
 
-.user-card .picture img{
+.post-card .picture img{
     border-radius: 50%;
 }
 
-.user-card .name{
+.post-card .name{
     font-weight: 700;
 }
 
-.user-card .job{
+.post-card .job{
     font-style: italic;
 }
 
-.user-card .email{
+.post-card .email{
     font-size: 80%;
 }

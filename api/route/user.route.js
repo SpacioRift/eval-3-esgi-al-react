@@ -5,5 +5,6 @@ const auth = require('../middleware/auth.middleware.js');
 const router = express.Router();
 
 router.get("/",auth,userController.getAll);
+router.get("/:id", auth, userController.getById);
 
 module.exports = router;

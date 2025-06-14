@@ -23,7 +23,7 @@ export default function Emotion({ postId }) {
     return (
         <>
             <div className = "button-container">
-                <FontAwesomeIcon icon={emotion?faRegularHeart:faSolidHeart} onClick={() => handleClick()} />
+                <FontAwesomeIcon icon={emotion?faRegularHeart:faSolidHeart} style={{color: "crimson",}} onClick={() => handleClick()} />
             </div>
         </>
     )

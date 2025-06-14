@@ -3,31 +3,36 @@ import "./PostCard.css";
 import EditPost from "../EditPost/EditPost";
 
 export default function PostCard({ post }) {
-        const [user, setUserList] = useState(null);
+        const [user, setUserList] = useState("");
         console
     
         useEffect(() => {
-            fetch(`http://localhost:3000/user/${post.AuthId}`, {
+            fetch(`http://localhost:3000/user/${post.authorId}`, {
                 method: "GET",
                 headers:{
-                    authorization: 'Bearer ' + "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImF2YWFzdDJAbXlnZXMuZnIiLCJpZCI6MSwiaWF0IjoxNzQ5ODk3Mjc4fQ.QFR9ndRRVv7oS93K84ZzNGyoWAeSg-HWAqyDhX8aPU8"
+                    authorization: 'Bearer ' + "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImF2YWFzdDJAbXlnZXMuZnIiLCJpZCI6MSwiaWF0IjoxNzQ5ODk5NDkyfQ.16fWHQijwOLwoboI29NQb5PUBZRMv0FQ24A2IkqQLE8"
                 }
             })
                 .then(result => result.json())
-                .then(data =>
-                    setUserList(data))
+                .then(data =>{
+                    console.log("Utilisateur reçu :", data);
+                    setUserList(data)})
         }, [post.authId]);
 
     return (
         <div className="post-card">
-            <div if={post.picture} className="picture">
-                <img src={post.picture} />
+            <div className="author">
+                <div className="nickname">
+                    {user.nickname  ? user.nickname : "Utilisateur inconnu"}
+                </div>
             </div>
-            <div className="message">
-                {post.message}
-            </div>
-            <div className="">
-                {user.nickname  ? user.nickname : "Utilisateur inconnu"}
+            <div className="content">
+                <div if={post.picture} className="picture">
+                    <img src={post.picture} />
+                </div>
+                <div className="message">
+                    {post.message}
+                </div>
             </div>
             <Emotion postId={post.id} /> 
             <EditPost postId={post.id}/>

@@ -1,25 +1,48 @@
 .post-card {
     display: flex;
-    padding: 20px;
-    border: 1px solid #D0D0D0;
-    border-radius: 4px;
+    justify-content: space-around;
+    min-width: none;
+    max-width: 80%;
     flex-direction: column;
-    background-color: #151515;
-    width: 200px;
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 16px;
+    width: 280px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    transition: transform 0.2s ease-in-out;
 }
 
-.post-card .picture img{
-    border-radius: 50%;
+.post-card:hover {
+    transform: translateY(-5px);
 }
 
-.post-card .name{
-    font-weight: 700;
+.author {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #61dafb;
 }
 
-.post-card .job{
-    font-style: italic;
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
-.post-card .email{
-    font-size: 80%;
+.picture img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #444;
+}
+
+.message {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: #eaeaea;
 }

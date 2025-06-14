@@ -7,9 +7,9 @@ export default function PostList() {
 
     useEffect(() => {
         fetch('http://localhost:3000/post/', {
-            method: "POST",
+            method: "GET",
             headers:{
-                authorization: 'Bearer ' + "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImF2YWFzdDJAbXlnZXMuZnIiLCJpZCI6MSwiaWF0IjoxNzQ5ODk3Mjc4fQ.QFR9ndRRVv7oS93K84ZzNGyoWAeSg-HWAqyDhX8aPU8"
+                authorization: 'Bearer ' + "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImF2YWFzdDJAbXlnZXMuZnIiLCJpZCI6MSwiaWF0IjoxNzQ5ODk5NDkyfQ.16fWHQijwOLwoboI29NQb5PUBZRMv0FQ24A2IkqQLE8"
             }
         })
             .then(result => result.json())
@@ -20,7 +20,7 @@ export default function PostList() {
 
     return (
         <>
-        <div>
+        <div className="post-create">
             
         </div>
         <div className="post-list">  
@@ -28,10 +28,8 @@ export default function PostList() {
                 postList.map(post => {
                     return (
                         <PostCard key={post.id} post={post}>
-                            <button> Ajouter aux amis</button>
-                            <Emotion postId={post.id} /> 
+                             
                         </PostCard>
-                        
                     )
                 }
                 )

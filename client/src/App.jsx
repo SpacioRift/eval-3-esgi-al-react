@@ -12,7 +12,6 @@ function App() {
       <div className=''>
         <BrowserRouter>
           <Routes>
-            <Route path="/emotion" element={<Emotion postId={Id}/>} />
             <Route path="/post" element={<PostList />} />
           </Routes>
         </BrowserRouter> 

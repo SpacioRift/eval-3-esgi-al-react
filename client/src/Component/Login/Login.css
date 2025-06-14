@@ -30,6 +30,7 @@ label {
 }
 
 /* Champs input */
+input[type="text"],
 input[type="email"],
 input[type="password"] {
   width: 100%;
@@ -37,6 +38,8 @@ input[type="password"] {
   border: 1px solid #ccc;
   border-radius: 8px;
   font-size: 1rem;
+  background-color: #fff;
+  color: #000;
 }
 
 /* Boutons */
@@ -71,4 +74,14 @@ p {
   font-weight: bold;
   text-align: center;
   min-height: 1.5rem;
+}
+
+/* Pour forcer le fond clair en thème sombre */
+@media (prefers-color-scheme: dark) {
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    background-color: #fff;
+    color: #000;
+  }
 }

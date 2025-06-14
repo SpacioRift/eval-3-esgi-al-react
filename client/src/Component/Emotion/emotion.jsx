@@ -12,15 +12,19 @@ export default function Emotion({ postId }) {
     };
 
     useEffect(() => {
-        emotion && fetch(`http://localhost:6666/emoticone/`, { method: "POST" });
-        !emotion && fetch(`http://localhost:6666/emoticone/${postId}`, { method: "DELETE" });
+        if(emotion){
+            fetch(`http://localhost:6666/emoticone/`, { method: "POST" });
+        }
+        else{
+            fetch(`http://localhost:6666/emoticone/${postId}`, { method: "DELETE" });
+        }
     }, [emotion]);
             
     return (
-    <>
-        <div className = "button-container">
-            <FontAwesomeIcon icon={emotion?faRegularHeart:faSolidHeart} onClick={() => handleClick()} />
-        </div>
-    </>
-)
+        <>
+            <div className = "button-container">
+                <FontAwesomeIcon icon={emotion?faRegularHeart:faSolidHeart} onClick={() => handleClick()} />
+            </div>
+        </>
+    )
 }

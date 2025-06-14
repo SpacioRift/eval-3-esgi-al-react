@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./PostCard.css";
+import EditPost from "../EditPost/EditPost";
 
 export default function PostCard({ post }) {
         const [user, setUserList] = useState(null);
@@ -28,6 +29,8 @@ export default function PostCard({ post }) {
             <div className="">
                 {user.nickname  ? user.nickname : "Utilisateur inconnu"}
             </div>
+            <Emotion postId={post.id} /> 
+            <EditPost postId={post.id}/>
         </div>
     )
 }

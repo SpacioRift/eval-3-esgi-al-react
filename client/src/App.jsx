@@ -15,7 +15,8 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/post" element={<PostList />} />
-             <Route path="/Login" element={<Login/>} />
+            <Route path="/" element={<Login/>} />
+            <Route path="/Login" element={<Login/>} />
             <Route path="/Inscription" element={<Inscription/>} />
           </Routes>
         </BrowserRouter> 

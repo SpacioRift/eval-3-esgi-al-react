@@ -6,10 +6,10 @@ export default function PostCard({ post }) {
         console
     
         useEffect(() => {
-            fetch('http://localhost:3000/user/' + post.authId, {
+            fetch(`http://localhost:3000/user/${post.AuthId}`, {
                 method: "GET",
                 headers:{
-                    authorization: 'Bearer ' + "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImF2YWFzdDJAbXlnZXMuZnIiLCJpZCI6MSwiaWF0IjoxNzQ5NzM1NDY0fQ.T4xO4a19bmcxCWWX4VBOvR6yWBr8FSHNZ7K4KObaqAE"
+                    authorization: 'Bearer ' + "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImF2YWFzdDJAbXlnZXMuZnIiLCJpZCI6MSwiaWF0IjoxNzQ5ODk3Mjc4fQ.QFR9ndRRVv7oS93K84ZzNGyoWAeSg-HWAqyDhX8aPU8"
                 }
             })
                 .then(result => result.json())

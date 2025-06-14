@@ -18,7 +18,7 @@ function App() {
             <Route path="/edit" element={<EditPost />} />
             <Route path="/" element={<Login/>} />
             <Route path="/Login" element={<Login/>} />
-            <Route path="/Inscription" element={<Inscription/>} />
+            <Route path="/Signin" element={<Inscription/>} />
           </Routes>
         </BrowserRouter> 
       </div>

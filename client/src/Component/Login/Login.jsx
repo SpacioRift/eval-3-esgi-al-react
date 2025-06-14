@@ -14,7 +14,7 @@ export default function Login(){
     }
 
     const handleClickToPost = () => {
-        toThisPage('/Post');
+        toThisPage('/post');
     }
 
     const handleChange = (event) => {

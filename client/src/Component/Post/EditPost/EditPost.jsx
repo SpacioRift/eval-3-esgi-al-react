@@ -18,7 +18,7 @@ export default function EditPost({ PostId, initialMessage, token}){
         await fetch(`http://localhost:3000/post/${PostId}`, {
             method: "PUT",
             headers: {
-                Authorization: `Bearer ${token}` // Remplacer par le token
+                Authorization: `Bearer ${token}`
             },
             body: formData
         });

@@ -4,14 +4,14 @@
     min-width: none;
     max-width: 80%;
     flex-direction: column;
-    background-color: #1e1e1e;
-    border: 1px solid #333;
+    background-color: #EEF7FF;
+    border: 1px solid #CDE8E5;
     border-radius: 8px;
     padding: 16px;
     width: 280px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    color: #fff;
     transition: transform 0.2s ease-in-out;
+
 }
 
 .post-card:hover {
@@ -44,5 +44,5 @@
 .message {
     font-size: 0.95rem;
     line-height: 1.4;
-    color: #eaeaea;
+    color: #000000;
 }

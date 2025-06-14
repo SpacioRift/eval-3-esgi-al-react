@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import ButtonCreatePost from "../../Component/Button/CreatePost/ButtonCreatePost";
 import PostCard from "../../Component/Post/PostCard/PostCard";
 import "./PostList.css";
 
@@ -20,21 +21,22 @@ export default function PostList() {
 
     return (
         <>
-        <div className="post-create">
-            
-        </div>
-        <div className="post-list">  
-            {
-                postList.map(post => {
-                    return (
-                        <PostCard key={post.id} post={post}>
+            <div className="container">
+                <div className="post-create">
+                    <ButtonCreatePost />
+                </div>
+                <div className="post-list">  
+                    {
+                        postList.map(post => {
+                            return (
+                                <PostCard key={post.id} post={post}>
                              
-                        </PostCard>
-                    )
-                }
-                )
-            }
-        </div>
+                                </PostCard>
+                            )
+                        })   
+                    }
+                </div>
+            </div>
         </>
     )
 }

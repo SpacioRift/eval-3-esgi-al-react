@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "./PostCard.css";
 import EditPost from "../EditPost/EditPost";
+import Emotion from "../../Emotion/emotion.jsx";
 
 export default function PostCard({ post }) {
         const [user, setUserList] = useState("");

@@ -5,12 +5,13 @@ import "./PostList.css";
 
 export default function PostList() {
     const [postList, setPostList] = useState([]);
+    let token = localStorage.getItem("token");
 
     useEffect(() => {
         fetch('http://localhost:3000/post/', {
             method: "GET",
             headers:{
-                authorization: 'Bearer ' + "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImF2YWFzdDJAbXlnZXMuZnIiLCJpZCI6MSwiaWF0IjoxNzQ5ODk5NDkyfQ.16fWHQijwOLwoboI29NQb5PUBZRMv0FQ24A2IkqQLE8"
+                authorization: 'Bearer ' + token,
             }
         })
             .then(result => result.json())

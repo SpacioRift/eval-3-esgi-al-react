@@ -35,6 +35,7 @@ export default function Login(){
 
             if(res.ok == true){
                 console.log("Connexion success");
+                localStorage.setItem("token", data.jwt);
                 handleClickToPost();
             }
             else{

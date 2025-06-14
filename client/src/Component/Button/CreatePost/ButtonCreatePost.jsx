@@ -1,5 +1,5 @@
 import './ButtonCreatePost.css';
-import CreatePost from '../../../Page/Post/CreatePost/CreatePost.jsx';
+import CreatePost from '../../Modal/CreatePost/CreatePost.jsx';
 
 
 

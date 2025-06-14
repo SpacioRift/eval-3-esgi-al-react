@@ -3,7 +3,7 @@ import "./EditPost.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPen } from '@fortawesome/free-solid-svg-icons';
 
-export default function EditPost({ PostId, initialMessage = "" }){
+export default function EditPost({ PostId, initialMessage, token}){
     const [editing, setEditing] = useState(false);
     const [message, setMessage] = useState(initialMessage);
     const [image, setImage] = useState(null);
@@ -18,7 +18,7 @@ export default function EditPost({ PostId, initialMessage = "" }){
         await fetch(`http://localhost:3000/post/${PostId}`, {
             method: "PUT",
             headers: {
-                Authorization: "Bearer <token>" // Remplacer par le token
+                Authorization: `Bearer ${token}` // Remplacer par le token
             },
             body: formData
         });

@@ -146,8 +146,8 @@
 /* Dark mode support */
 @media (prefers-color-scheme: dark) {
   .contenue_modal {
-    background: #1f2937;
-    color: #f9fafb;
+    background: #cfcfcf;
+    color: #000000;
   }
   
   .contenue_modal h3 {
@@ -155,9 +155,9 @@
   }
   
   .contenue_modal textarea {
-    background-color: #374151;
-    border-color: #4b5563;
-    color: #f9fafb;
+    background-color: #ababab;
+    border-color: #717171;
+    color: #000000;
   }
   
   .contenue_modal textarea:focus {
@@ -165,9 +165,9 @@
   }
   
   .contenue_modal input[type="file"] {
-    background-color: #374151;
-    border-color: #4b5563;
-    color: #f9fafb;
+    background-color: #ababab;
+    border-color: #717171;
+    color: #000000;
   }
   
   .contenue_modal input[type="file"]:hover {

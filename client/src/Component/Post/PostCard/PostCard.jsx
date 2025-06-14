@@ -35,7 +35,7 @@ export default function PostCard({ post }) {
                 </div>
             </div>
             <Emotion postId={post.id} /> 
-            <EditPost postId={post.id}/>
+            <EditPost PostId={post.id} initialMessage={post.message} token={token} />
         </div>
     )
 }

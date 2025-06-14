@@ -48,7 +48,7 @@ export default function Login(){
         }
 
         catch(error){
-            setWarning("Erreur d'inscription");
+            setWarning("Erreur serveur");
         }
 
     };

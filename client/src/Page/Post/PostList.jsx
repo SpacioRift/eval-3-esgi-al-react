@@ -29,7 +29,9 @@ export default function PostList() {
                     return (
                         <PostCard key={post.id} post={post}>
                             <button> Ajouter aux amis</button>
+                            <Emotion postId={post.id} /> 
                         </PostCard>
+                        
                     )
                 }
                 )

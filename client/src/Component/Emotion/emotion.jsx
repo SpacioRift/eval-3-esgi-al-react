@@ -1,28 +1,20 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./emotion.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart as faSolidHeart } from "@fortawesome/free-solid-svg-icons";
 import { faHeart as faRegularHeart } from "@fortawesome/free-regular-svg-icons";
 
 
-export default function Emotion() {
+export default function Emotion({ postId }) {
     const [emotion, setEmotion] = useState(false);
+    const handleClick = () => {
+        setEmotion(!emotion);
+    };
 
-        useEffect(() => {
-            fetch('http://localhost:3000/emoticone/', { // Modifier l'url en fonction de l'API
-                method: "POST"
-            })
-            .then(result => result.json())
-            .then(data => setUserList(data)) // pas nécessaire ici
-        });
-        useEffect(() => { // Modifier l'url en fonction de l'API
-            fetch('http://localhost:3000/emoticone/', {
-                method: "DELETE"
-            })
-            .then(result => result.json())
-            .then(data => setUserList(data))// pas nécessaire ici
-        });
-    setEmotion(!emotion);
+    useEffect(() => {
+        emotion && fetch(`http://localhost:6666/emoticone/`, { method: "POST" });
+        !emotion && fetch(`http://localhost:6666/emoticone/${postId}`, { method: "DELETE" });
+    }, [emotion]);
             
     return (
     <>
@@ -32,6 +24,3 @@ export default function Emotion() {
     </>
 )
 }
-        
-
-    
